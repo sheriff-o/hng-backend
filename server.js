@@ -5,6 +5,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
+
+app.get("/", (req, res) => {
+    const emp = {name: "sheriff", age: 35}
+    res.json(emp)
+})
+
+
 app.get('/api/hello', (req, res) => {
     const visitorName = req.query.visitor_name;
     const clientIp = '127.0.0.1';
